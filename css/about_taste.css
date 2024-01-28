@@ -1,0 +1,20 @@
+/* about_taste.css */
+@charset "UTF-8";
+table{
+    height: 500px;
+    font-size: larger;
+    font-weight: bold;
+    position: fixed;
+    top: 17%;
+    left: 15%;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid silver;
+}
+td img{
+    object-fit: cover;
+    width: 400px;
+}
+td{
+    padding: 10px 60px;
+}
