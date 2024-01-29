@@ -6,7 +6,7 @@
     <title>Join</title>
     <link rel="stylesheet" type="text/css" href="/Web_Proj/css/header.css">
     <link rel="stylesheet" type="text/css" href="/Web_Proj/css/join.css">
-    
+    <link rel="script" href="/Web_Proj/js/join.js">
 </head>
 <body>
     <!-- header -->
@@ -34,16 +34,16 @@
                     </li>
                     <li>
                         <label class="title">비밀번호</label>
-                        <input type="text" id="joinPw1" placeholder="비밀번호를 입력해주세요">
+                        <input type="text" id="joinPw" placeholder="비밀번호를 입력해주세요">
                     </li>
                     <li>
                         <label class="title">비밀번호 확인</label>
-                        <input type="text" id="joinPw2" placeholder="비밀번호를 다시 한번 입력해주세요">
+                        <input type="text" id="joinPwCheck" placeholder="비밀번호를 다시 한번 입력해주세요">
                     </li>
                 </ul>
             </fieldset>
             <div id="joinBtn">
-                <input type="submit" class="joinBtn" value="회원가입">
+                <input type="submit" class="joinBtn" value="회원가입" onclick="join()">
             </div>
         </form>
     </div>
