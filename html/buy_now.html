@@ -6,6 +6,18 @@
     <title>buy_now</title>
     <link rel="stylesheet" type="text/css" href="/Web_Proj/css/header.css">
     <link rel="stylesheet" type="text/css" href="/Web_Proj/css/buy_now.css">
+    <!-- <script>
+        function buy(){
+            let name=document.getElementById("name").value;
+            let phoNum=document.getElementById("phoNum").value;
+            let email=document.getElementById("email").value;
+            let address=document.getElementById("address").value;
+            let memo=document.getElementById("memo").value;
+            let blending=document.getElementById("blending").value;
+            let signature=document.getElementById("signature").value;
+        }
+        
+    </script> -->
 </head>
 <body>
     <!-- header -->
@@ -17,28 +29,24 @@
             <li><a href="/Web_Proj/html/buy_now.html">BUY NOW</a></li>
         </ul>
     </div>
-    <div id="divBtn">
-        <button class="btn" type="button" onclick="location.href='/Web_Proj/html/join.html'">Join</button>
-        <button class="btn" type="button" onclick="location.href='/Web_Proj/html/login.html'">Login</button>
-    </div>
     <!-- header --------------------------------------------------------------------------------------- -->
     <div class="container">
         <h1>상품 주문서</h1>
-        <form>
+        <form action="/Web_Proj/html/order.html" method="get">
             <fieldset>
                 <legend>주문자 정보</legend>
                 <ul>
                     <li>
-                        <label for="userName" class="title">이름</label>
-                        <input type="text" id="name" placeholder="이름을 입력해주세요">
+                        <label for="name" class="title">이름</label>
+                        <input type="text" id="name" name="name" autocomplete="off" placeholder="이름을 입력해주세요">
                     </li>
                     <li>
-                        <label for="userPhone" class="title">전화번호</label>
-                        <input type="text" id="phoNum" placeholder="전화번호를 입력해주세요">            
+                        <label for="phoNum" class="title">전화번호</label>
+                        <input type="text" id="phoNum" name="phoNum" autocomplete="off" placeholder="전화번호를 입력해주세요">            
                     </li>
                     <li>
-                        <label for="userEmail" class="title">이메일</label>
-                        <input type="text" id="email" placeholder="이메일을 입력해주세요">
+                        <label for="email" class="title">이메일</label>
+                        <input type="text" id="email" name="email" autocomplete="off" placeholder="이메일을 입력해주세요">
                     </li>
                 </ul>
             </fieldset>
@@ -46,8 +54,8 @@
                 <legend>배송지 정보</legend>
                 <ul>
                     <li>
-                        <label for="addr" class="title">주소</label>
-                        <input type="text" id="address">
+                        <label for="address" class="title">주소</label>
+                        <input type="text" autocomplete="off" name="address" id="address">
                     </li>
                     <li>
                         <label for="memo" class="title">배송 메모</label>
@@ -60,16 +68,16 @@
                 <ul>
                     <li>
                         <label class="title2"><input type="checkbox" id="blending">블랜딩원두</label>
-                        <label><input type="number" value="0" min="0" max="5">개</label>
+                        <label><input type="number" id="blendNum" value="0" min="0" max="5">개</label>
                     </li>
                     <li>
                         <label class="title2"><input type="checkbox" id="signature">시그니처원두</label>
-                        <label><input type="number" value="0" min="0" max="5">개</label>
+                        <label><input type="number" id="sigNum" value="0" min="0" max="5">개</label>
                     </li>
                 </ul>
             </fieldset>
             <div class="centered">
-                <input type="submit" class="order" value="주문하기">
+                <input type="submit" class="order" value="주문하기" onclick="buy()" target="_blank">
                 <input type="reset" class="order" value="다시작성">
             </div>
         </form>

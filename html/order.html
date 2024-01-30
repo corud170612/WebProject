@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order.html</title>
+    <script language="javascript">
+
+        var urlParams = location.search.split(/[?&]/).slice(1).map(function(paramPair) {
+    
+            return paramPair.split(/=(.+)?/).slice(0, 2);
+    
+        }).reduce(function(obj, pairArray) {
+    
+            obj[pairArray[0]] = pairArray[1];
+    
+            return obj;
+    
+        }, {});
+    
+        var usrnName=urlParams.name;
+        var usrPhone=urlParams.phoNum;
+        var usraddress=urlParams.address;
+    </script>
+
+</head>
+<body>
+   <script>
+    document.write(`
+    <h1>주문확인서</h1>
+    <h2>배송지 정보</h2>
+    수령인: ${usrnName}<br>
+    연락처: ${usrPhone}<br>
+    배송지: ${usraddress}<br>
+    `)
+   
+   </script>
+</body>
+</html>
