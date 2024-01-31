@@ -6,18 +6,7 @@
     <title>buy_now</title>
     <link rel="stylesheet" type="text/css" href="/Web_Proj/css/header.css">
     <link rel="stylesheet" type="text/css" href="/Web_Proj/css/buy_now.css">
-    <!-- <script>
-        function buy(){
-            let name=document.getElementById("name").value;
-            let phoNum=document.getElementById("phoNum").value;
-            let email=document.getElementById("email").value;
-            let address=document.getElementById("address").value;
-            let memo=document.getElementById("memo").value;
-            let blending=document.getElementById("blending").value;
-            let signature=document.getElementById("signature").value;
-        }
-        
-    </script> -->
+    <script language="javascript" src="/Web_Proj/js/order.js"></script>
 </head>
 <body>
     <!-- header -->
@@ -28,6 +17,10 @@
             <li><a href="/Web_Proj/html/about_taste.html">ABOUT TASTE</a></li>
             <li><a href="/Web_Proj/html/buy_now.html">BUY NOW</a></li>
         </ul>
+    </div>
+    <div id="divBtn">
+        <button class="btn" type="button" onclick="location.href='/Web_Proj/html/join.html'">Join</button>
+        <button class="btn" type="button" onclick="location.href='/Web_Proj/html/login.html'">Login</button>
     </div>
     <!-- header --------------------------------------------------------------------------------------- -->
     <div class="container">
@@ -67,17 +60,17 @@
                 <legend>상품 정보</legend>
                 <ul>
                     <li>
-                        <label class="title2"><input type="checkbox" id="blending">블랜딩원두</label>
+                        <label class="title2"><input type="checkbox" name="checkedBlend" id="blending">블랜딩원두</label>
                         <label><input type="number" id="blendNum" value="0" min="0" max="5">개</label>
                     </li>
                     <li>
-                        <label class="title2"><input type="checkbox" id="signature">시그니처원두</label>
+                        <label class="title2"><input type="checkbox" name="checkedSigna" id="signature">시그니처원두</label>
                         <label><input type="number" id="sigNum" value="0" min="0" max="5">개</label>
                     </li>
                 </ul>
             </fieldset>
             <div class="centered">
-                <input type="submit" class="order" value="주문하기" onclick="buy()" target="_blank">
+                <input type="submit" class="order" value="주문하기" target="_blank" onclick="order()">
                 <input type="reset" class="order" value="다시작성">
             </div>
         </form>
